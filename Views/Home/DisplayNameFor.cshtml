@@ -1,0 +1,46 @@
+﻿@model Formularios.Models.UsuarioDisplay
+<h2>Datos de usuario con DisplayNameFor y DisplayName</h2>
+
+<div class="form-group">
+    <label class="control-label">@Html.DisplayNameFor(model => model.Id)</label>
+    <p class="form-control-static">@Html.DisplayFor(model => model.Id)</p>
+</div>
+
+<div class="form-group">
+    <label class="control-label">@Html.DisplayNameFor(model => model.Nombre)</label>
+    <p class="form-control-static">@Html.DisplayFor(model => model.Nombre)</p>
+</div>
+
+<div class="form-group">
+    <label class="control-label">@Html.DisplayNameFor(model => model.Email)</label>
+    <p class="form-control-static">@Html.DisplayFor(model => model.Email)</p>
+</div>
+
+<div class="form-group">
+    <label class="control-label">@Html.DisplayNameFor(model => model.Password)</label>
+    <p class="form-control-static">@Html.DisplayFor(model => model.Password)</p>
+</div>
+
+<div class="form-group">
+    <label class="control-label">@Html.DisplayNameFor(model => model.Pais)</label>
+    <p class="form-control-static">@Html.DisplayFor(model => model.Pais)</p>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.FechaNacimiento)
+    <p class="form-control-static">@Html.DisplayFor(model => model.FechaNacimiento)</p>
+</div>
+
+<div class="form-group">
+    <label class="control-label">@Html.DisplayNameFor(model => model.Comentarios)</label>
+    <p class="form-control-static">@Html.DisplayFor(model => model.Comentarios)</p>
+</div>
+
+<div class="form-group">
+    <label class="control-label">@Html.DisplayNameFor(model => model.AceptoTerminos)</label>
+    <p class="form-control-static">@Html.DisplayFor(model => model.AceptoTerminos)</p>
+</div>
+
+<div class="form-group">
+    <a href="@Url.Action("Index")" class="btn btn-default">Volver</a>
+</div>

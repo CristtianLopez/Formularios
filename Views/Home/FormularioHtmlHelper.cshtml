@@ -1,0 +1,49 @@
+﻿@model Formularios.Models.Usuario
+
+<h1>Formulario Generado con Html Helpers</h1>
+
+@using (Html.BeginForm("Submit", "Usuario", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nombre, new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control" })
+        @* @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" }) *@
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @* @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" }) *@
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Pais, new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.Pais, new { @class = "form-control" })
+        @* @Html.ValidationMessageFor(model => model.Pais, "", new { @class = "text-danger" }) *@
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FechaNacimiento, new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.FechaNacimiento, "{0:yyyy-MM-dd}", new { @class = "form-control", @type = "date" })
+        @* @Html.ValidationMessageFor(model => model.FechaNacimiento, "", new { @class = "text-danger" }) *@
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Comentarios, new { @class = "control-label" })
+        @Html.TextAreaFor(model => model.Comentarios, new { @class = "form-control" })
+        @* @Html.ValidationMessageFor(model => model.Comentarios, "", new { @class = "text-danger" }) *@
+    </div>
+
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                @Html.CheckBoxFor(model => model.AceptoTerminos) Acepto los términos y condiciones
+            </label>
+        </div>
+        @* @Html.ValidationMessageFor(model => model.AceptoTerminos, "", new { @class = "text-danger" }) *@
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+}

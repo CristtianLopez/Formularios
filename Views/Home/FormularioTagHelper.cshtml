@@ -1,0 +1,49 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers;
+@model Formularios.Models.Usuario
+
+<h1>Formulario Generado con Tag Helper</h1>
+<form asp-action="Submit" asp-controller="Usuario" method="post">
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+        @* <span asp-validation-for="Nombre" class="text-danger"></span> *@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        @* <span asp-validation-for="Email" class="text-danger"></span> *@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Pais" class="control-label"></label>
+        <input asp-for="Pais" class="form-control" />
+        @* <span asp-validation-for="Pais" class="text-danger"></span> *@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FechaNacimiento" class="control-label"></label>
+        <input asp-for="FechaNacimiento" class="form-control" type="date" />
+        @* <span asp-validation-for="FechaNacimiento" class="text-danger"></span> *@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Comentarios" class="control-label"></label>
+        <textarea asp-for="Comentarios" class="form-control"></textarea>
+        @* <span asp-validation-for="Comentarios" class="text-danger"></span> *@
+    </div>
+
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <input asp-for="AceptoTerminos" /> Acepto los términos y condiciones
+            </label>
+        </div>
+        @* <span asp-validation-for="AceptoTerminos" class="text-danger"></span> *@
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+</form>
+

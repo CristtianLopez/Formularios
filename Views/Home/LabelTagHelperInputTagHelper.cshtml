@@ -1,0 +1,41 @@
+﻿@model Formularios.Models.Usuario
+<h2>Editar datos de usuario con Label TagHelper e Input TagHelper</h2>
+
+<div class="form-group">
+    <label asp-for="Id"></label>
+    <input asp-for="Id"/>
+</div>
+
+<div class="form-group">
+    <label asp-for="Nombre"></label>
+    <input asp-for="Nombre" />
+</div>
+
+<div class="form-group">
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+</div>
+
+<div class="form-group">
+    <label asp-for="Pais"></label>
+    <input asp-for="Pais" />
+</div>
+
+<div class="form-group">
+    <label asp-for="FechaNacimiento"></label>
+    <input asp-for="FechaNacimiento" />
+</div>
+
+<div class="form-group">
+    <label asp-for="Comentarios"></label>
+    <input asp-for="Comentarios"/>
+</div>
+
+<div class="form-group">
+    <label asp-for="AceptoTerminos"></label>
+    <input asp-for="AceptoTerminos"/>
+</div>
+
+<div class="form-group">
+    <a href="@Url.Action("Index")" class="btn btn-default">Volver a la lista</a>
+</div>

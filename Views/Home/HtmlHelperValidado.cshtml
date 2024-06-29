@@ -1,0 +1,73 @@
+﻿@model Formularios.Models.UsuarioValidado
+
+@{
+    ViewBag.Title = "Crear Usuario";
+}
+
+<h2>Crear Usuario</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-horizontal">
+        <h4>Usuario</h4>
+        <hr />
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="Nombre" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Pais" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <input asp-for="Pais" class="form-control" />
+                <span asp-validation-for="Pais" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FechaNacimiento" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <input asp-for="FechaNacimiento" class="form-control" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Comentarios" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <textarea asp-for="Comentarios" class="form-control" rows="4"></textarea>
+                <span asp-validation-for="Comentarios" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="AceptoTerminos" />
+                    <label asp-for="AceptoTerminos"></label>
+                    <span asp-validation-for="AceptoTerminos" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-default">Guardar</button>
+            </div>
+        </div>
+    </div>
+</form>
+
